@@ -1,25 +1,25 @@
-import robot from "robotjs";
+import { typeStringDelayed, keyTap } from "robotjs";
 
-export type ConsoleConfig = {
+export type GameConsoleConfig = {
     bindings: {
         toggleConsole: string;
         enter: string;
     }
 }
 
-export class Console {
-    private config: ConsoleConfig;
+export class GameConsole {
+    private config: GameConsoleConfig;
 
-    constructor(config: ConsoleConfig) {
+    constructor(config: GameConsoleConfig) {
         this.config = config;
     }
 
     private typeString(str: string) {
-        robot.typeStringDelayed(str, 100);
+        typeStringDelayed(str, 100);
     }
 
     private keyTap(key: string) {
-        robot.keyTap(key);
+        keyTap(key);
     }
 
     private toggleConsole() {

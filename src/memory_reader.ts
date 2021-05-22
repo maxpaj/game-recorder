@@ -40,23 +40,6 @@ export class MemoryReader {
         });
     }
 
-    attachDebugger() {
-        const process = this.getProcess(this.config.processName);
-
-        Debugger.attach(process.th32ProcessID);
-
-        Debugger.on('debugEvent', (debugEvent: DebugEvent) => {
-            console.log(`Hardware Register ${debugEvent.register} breakpoint`);
-            console.log(debugEvent);
-        });
-    }
-
-    handleDebugEvent() {
-        const process = this.getProcess(this.config.processName);
-        const success = memoryjs.handleDebugEvent(process.th32ProcessID, 0);
-        return success;
-    }
-
     getProcess(processName: string) {
         return memoryjs.openProcess(processName) as Process;
     }

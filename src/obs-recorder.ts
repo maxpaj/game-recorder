@@ -13,13 +13,13 @@ type SetImageProperties = {
 };
 
 type SetSceneItemTransformBoundsScale =
-  | "OBS_BOUNDS_STRETCH"
-  | "OBS_BOUNDS_SCALE_INNER"
-  | "OBS_BOUNDS_SCALE_OUTER"
-  | "OBS_BOUNDS_SCALE_TO_WIDTH"
-  | "OBS_BOUNDS_SCALE_TO_HEIGHT"
-  | "OBS_BOUNDS_MAX_ONLY"
-  | "OBS_BOUNDS_NONE";
+    | "OBS_BOUNDS_STRETCH"
+    | "OBS_BOUNDS_SCALE_INNER"
+    | "OBS_BOUNDS_SCALE_OUTER"
+    | "OBS_BOUNDS_SCALE_TO_WIDTH"
+    | "OBS_BOUNDS_SCALE_TO_HEIGHT"
+    | "OBS_BOUNDS_MAX_ONLY"
+    | "OBS_BOUNDS_NONE";
 
 type SetTextGDIPlusProperties = {
   source: string;
@@ -77,7 +77,7 @@ export type OBSConfig = {
   log?: (str: string) => void;
 }
 
-export class Recorder {
+export class OBSRecorder {
   private obsWebSocket: OBSWebSocket;
   private config: OBSConfig;
 
