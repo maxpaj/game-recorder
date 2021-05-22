@@ -11,6 +11,8 @@ Currently only for Windows.
 
 We currently only support OBS, because it is widely known and used. It has a rich feature set and can be interacted with using web sockets, which makes it easy to implement. 
 
+Requires that you install the [`obs-websocket` plugin](https://github.com/Palakis/obs-websocket/releases/tag/4.9.0) into your OBS.
+
 ## Interacting with the game process
 To interact with your game, you may have to read and write some data to your process.
 
