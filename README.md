@@ -1,5 +1,5 @@
 # game-recorder
-Record videos programatically. Using OBS and the game of your choice, you can use this library of components to set up automatic recording of videos.
+Record videos programmatically. Using OBS and the game of your choice, you can use this library of components to set up automatic recording of videos.
 
 We've used this for recording Dota 2 replays, and now the goal is to extend this to other games.
 
